@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seller Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Seller Calculator</h2>
+    <form id="seller-calculator-form">
+      <div class="form-group">
+        <label for="purchase-price">Purchase Price:</label>
+        <input type="number" id="purchase-price" name="purchasePrice" required>
+      </div>
+      <div class="form-group">
+        <label for="total-commission">Total Commission %:</label>
+        <input type="number" step="0.01" id="total-commission" name="totalCommission" required>
+      </div>
+      <div class="form-group">
+        <label for="survey-cost">Survey Cost:</label>
+        <input type="number" id="survey-cost" name="surveyCost" required>
+      </div>
+      <div class="form-group">
+        <label for="state-transfer-tax">State/County Transfer Tax:</label>
+        <input type="number" id="state-transfer-tax" name="stateTransferTax" required>
+      </div>
+      <div class="form-group">
+        <label for="city-transfer-tax">City Transfer Tax:</label>
+        <input type="number" id="city-transfer-tax" name="cityTransferTax" required>
+      </div>
+      <div class="form-group">
+        <label for="prior-tax-bill">Prior Year Full Tax Bill:</label>
+        <input type="number" id="prior-tax-bill" name="priorTaxBill" required>
+      </div>
+      <div class="form-group">
+        <label for="attorney-fee">Attorney Fee:</label>
+        <input type="number" id="attorney-fee" name="attorneyFee" required>
+      </div>
+      <div class="form-group">
+        <label for="property-taxes">Property Taxes %:</label>
+        <input type="number" step="0.01" id="property-taxes" name="propertyTaxes" required>
+      </div>
+      <div class="form-group">
+        <label for="mortgage-payoff">Mortgage Payoff Amount:</label>
+        <input type="number" id="mortgage-payoff" name="mortgagePayoff" required>
+      </div>
+      <div class="form-group">
+        <label for="miscellaneous">Miscellaneous Costs:</label>
+        <input type="number" id="miscellaneous" name="miscellaneous" required>
+      </div>
+      <div class="form-group">
+        <label for="closing-cost-credits">Closing Cost Credits:</label>
+        <input type="number" id="closing-cost-credits" name="closingCostCredits" required>
+      </div>
+      <button type="button" onclick="computeSellerProceeds()">Compute</button>
+    </form>
+    <div id="seller-result"></div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>

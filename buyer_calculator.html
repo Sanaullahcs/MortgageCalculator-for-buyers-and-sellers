@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buyer Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Buyer Calculator</h2>
+    <form id="buyer-calculator-form">
+      <div class="form-group">
+        <label for="home-price">Home Price:</label>
+        <input type="number" id="home-price" name="homePrice" required>
+      </div>
+      <div class="form-group">
+        <label for="down-payment">Down Payment %:</label>
+        <input type="number" step="0.01" id="down-payment" name="downPayment" required>
+      </div>
+      <div class="form-group">
+        <label for="interest-rate">Interest Rate %:</label>
+        <input type="number" step="0.01" id="interest-rate" name="interestRate" required>
+      </div>
+      <div class="form-group">
+        <label for="loan-term">Term (years):</label>
+        <input type="number" id="loan-term" name="loanTerm" required>
+      </div>
+      <div class="form-group">
+        <label for="hazard-insurance">Hazard Insurance:</label>
+        <input type="number" id="hazard-insurance" name="hazardInsurance" required>
+      </div>
+      <div class="form-group">
+        <label for="property-taxes">Property Taxes %:</label>
+        <input type="number" step="0.01" id="property-taxes" name="propertyTaxes" required>
+      </div>
+      <div class="form-group">
+        <label for="city-transfer-tax">City Transfer Tax:</label>
+        <input type="number" id="city-transfer-tax" name="cityTransferTax" required>
+      </div>
+      <div class="form-group">
+        <label for="closing-date">Closing Date:</label>
+        <input type="date" id="closing-date" name="closingDate" required>
+      </div>
+      <button type="button" onclick="computeBuyerCost()">Compute</button>
+    </form>
+    <div id="buyer-result"></div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
